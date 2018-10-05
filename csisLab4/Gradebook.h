@@ -1,13 +1,30 @@
 #pragma once
+
+#include <string>
+#include <vector>
+#include "Student.h"
+
+
 class Gradebook
 {
 public:
-	Gradebook(); // initializes to gradebook name
+	Gradebook(std::string name); // initializes to gradebook name
 	
-private:
-	// vector of students
+	// Setters
+	void SetgradebookName(std::string name);
 
-	// add another student to gradebook (student push_back)
+	// Getters
+	std::string GetgradebookName();
+	int GetNumStudents();
+
+	// Operations
+	void AddStudent(std::string studentName);
+	void PrintAllRecords();
+
+private:
+	// Vars
+	std::vector<Student> gradebook;
+	std::string gradebookName;
 
 
 

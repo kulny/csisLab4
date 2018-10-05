@@ -1,19 +1,33 @@
 #pragma once
 
 #include <array>
+#include <iostream>
+#include <vector>
+#include <string>
 
 class Student
 {
 public:
-	Student();
+	Student(std::string name); // inits object to given name, and array of grades
+
+	// Setters
+	void SetlName(std::string name);
+
+	// Getters
+	std::string GetlName();
+
+	// Operations
+	void DisplayGrades();
+	void AddMultipleGrades();
 
 private:
-	std::array<double, 5> grades;
+	// Vars
+	std::vector<double> grades;
 	std::string lName;
-	// input grades
+	int numGrades = 5;
 
-	// setters and getters fName, lName
-
+	// Operations
+	void AddGrade(int grade);
 
 
 };
